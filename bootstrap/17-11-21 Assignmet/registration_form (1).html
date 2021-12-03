@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Simple Drag Example</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+<style>
+     form {
+            width: 200px;
+            padding: 10px;
+            margin:  auto;
+            border: 1px solid black;
+            color: black;
+        }
+
+   
+</style>
+</head>
+<script>
+    
+    $(function(){
+        $("#btn").click(function(){
+            let value = $(".form-input").val();
+            if(value===''){
+               alert("PLEASE ENTER All REQUIRED FIELDS")
+            }
+            else{
+                alert("REGISTRATION FORM SUBMITTED SUCCESSFULLY")
+                
+            }
+        })
+    });
+ 
+    $(function()
+    {
+        $('#mydragdiv').draggable();
+    });
+    $(function()
+    {
+        $('label').draggable();
+    });
+    $(function()
+    {
+        $('img').draggable();
+    });
+    $(function(){
+        $("#fname").blur(function(){
+            let value = $("#fname").val();
+            if(value===''){
+                $("#fname").text("enter fname");
+            }
+            else{
+                $("#uname").val(value + "@smvec.ac.in");
+            }
+        })
+    });
+</script>
+<body  style="background-color:skyblue;"><div>
+   
+</div>
+    <div id="mydragdiv" style="width:200px;height:100px; padding:1em;">
+    <span class="move" style="width:50px; padding: 1em;"><h1>REGISTRATION FORM</h1></span>
+    <form >
+        <label for="name">First Name*:</label><br>
+        <input type="text"  class="form-input" id="fname" name="name" placeholder="Enter First Name" required autofocus><br><br>
+        <label for="name">Last Name*:</label><br>
+        <input type="text" class="form-input"  id="lname" name="name" placeholder="Enter Last name" required autofocus><br><br>
+
+
+        <label for="name">Your User Name:</label><br>
+        <input type="text" id="uname" name="name" placeholder="Your User name" required autofocus readonly><br><br>
+
+        <br>
+
+        <label class="label-title">Gender*</label>
+            <select class="form-input" id="level" >
+              <option value="m">Male</option>
+              <option value="f">Female</option>
+              <option value="others">Not-Specified</option>
+            </select>  <br><br>
+           
+
+        
+        
+
+        <label for="date">Date-of-Birth*:</label><br>
+        <input type="date" class="form-input"  id="date" for="date"><br><br>
+    
+
+        <label for="mail">EMail ID:</label><br>
+        <input type="email"   id="mail" for="mail" placeholder="Enter EMail id" required autofocus><br><br>
+
+
+        <label for="phn">Phone*:</label><br>
+        <input type="tel" class="form-input"  id="pin2" name="pin2" size="10" maxlength="10" placeholder="+91-1234-56-7890" required><br><br>
+
+        <label for="password">Aadhaar Number*:</label><br>
+        <input type="password"  class="form-input"  id="pwdd" name="pwdd" placeholder="XXXX-XXXX-XXXX" ><label class="label-title">
+        <br><br>
+
+        <br>
+
+        <label class="label-title">Annvual Income*</label>
+            <select class="form-input" id="level" >\
+            <option value="b"></option>
+              <option value="ug">3-5 LPA</option>
+              <option value="pg">6-10 LPA</option>
+              <option value="pg">>10LPA</option>
+              <option value="pg">< 3 LPA</option>
+            </select><br><br>
+            
+            <br>
+
+            <label class="label-title">Insurance*</label>
+            <input type="checkbox">yes 
+            <input type="checkbox">no</label>
+
+
+
+        <p style="color: black ;">* Required fields</p>
+
+
+        
+
+        <button  id="btn">Submit</button>
+        <input type="reset">
+
+    </form>
+</div>
+
+    
+    
+</body>
+</html>

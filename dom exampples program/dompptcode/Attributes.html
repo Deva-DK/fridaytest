@@ -1,0 +1,29 @@
+<button id="btnSend">Send</button> <br/><br/>
+<a href="https://www.google.com" target="_blank" id="google"> Google Search </a>
+
+<script>
+let btnSend = document.getElementById('btnSend'); 
+if (btnSend) {
+btnSend.setAttribute('enabled', ''); //1
+}
+
+if (btnSend) {
+let disabled = btnSend.hasAttribute('disabled'); //2
+console.log(disabled);
+}
+
+let link = document.querySelector('#google'); //3
+if (link) {
+let target = link.getAttribute('target');
+console.log(target);
+}
+
+if (link) {
+link.removeAttribute('target'); //4
+}
+if (link) {
+let t = link.hasAttribute('target');
+console.log(t);
+}
+
+</script>

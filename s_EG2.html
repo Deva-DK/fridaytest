@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple JS Examples</title>
+</head>
+<script type="text/javascript">
+    function Health()
+    {
+        const weight= prompt("Enter Weight(in Kgs)");
+            const height= prompt("Enter Height(in m)");
+            let BMI = (weight)/(height*height)
+            if(BMI>18.5 && BMI<24.5)
+            {
+                
+                return ("OH YEAH!!!! You are Normal")
+               
+            }
+            else if(BMI>24.5 && BMI<29.5)
+            {
+                return (" OH NO!!!!! You are Overweight")
+                
+            }
+            else if(BMI>29.5)
+            {
+                return ("OH NO!!!!! You are Obese")
+                
+            }
+            else
+            {
+                return (" OH NO!!!!! You are Lean")
+            }
+    }
+   
+</script>
+<body>
+    <h1>BMI Calculator</h1>
+    <p1>BMI Scale:</p1>
+    
+        <ol>
+            <li>BMI>18.5 and BMI<24.5 = Normal </li>
+                <li>BMI>24.5 and BMI<29.5 = Over Weight </li>
+                    <li>BMI>29.5 = Obese </li>
+                        <li>BMI<18.5 = Lean </li>
+        </ol>
+        <script>
+            document.write("Your BMI Result:<input= text" + Health() + "/>"");
+        </script>
+    
+    </body>
+        
+</html>

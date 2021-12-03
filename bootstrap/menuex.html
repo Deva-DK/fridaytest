@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" 
+integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" 
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+crossorigin="anonymous"></script>
+<!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+  .card {
+      border-radius: 2px solid blue;
+  }
+</style>
+
+</head>
+<body class="BG-DARK">
+  
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+          <img src="data:image/png;base64,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" class="logo-img" alt="Logo" width="50" height="50"> <BR>
+            <br>
+            <a class="navbar-brand" href="#">Health Care Center</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class=" navbar-brand" href="https://www.apollohospitals.com/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class=" navbar-brand" href="https://www.cricbuzz.com/cricket-schedule/upcoming-series/international">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class=" navbar-brand dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Facilities
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="https://www.healthywa.wa.gov.au/Articles/F_I/Intensive-care-units-ICUs" >ICU</a>
+                            <a class="dropdown-item" href="https://www.apollohospitals.com/departments/emergency-trauma-care-services/">TRAUMA CARE</a>
+                            <a class="dropdown-item" href="https://www.coverfox.com/health-insurance/articles/how-day-care-treatments-are-different-from-opd/">OPD</a>
+                            <a class="dropdown-item" href="https://timesofindia.indiatimes.com/topic/super-speciality-ward">SUPER SPECALITY</a>
+                            <a class="dropdown-item" href="https://www.nhp.gov.in/siddha_mty">SIDDATHA</a>
+                            <a class="dropdown-item" href="https://www.which.co.uk/reviews/birthing-options/article/maternity-options/labour-ward-a2VNN6R7VSAc">LABOR</a>
+                            
+                        </div>
+                    </li>
+                   
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                  
+                    <a class="nav-link navbar-brand" href="file:///C:/HTML%20NEW/try.html">FeedBack</a>
+                    <div class="container">
+                      <nav class="navbar navbar-expand-lg navbar-dark bg-dark  navbar-static-top">
+              
+                              <form class="form-inline my-2 my-lg-0">
+                                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                  <button type="button" class="btn btn-primary" data-toggle="modal"
+                                      data-target="#popup">Search</button>
+                                  <div class="modal fade" id="popup" tabindex="-1" role="banner" aria-labelledby="popup"
+                                      aria-hidden="true">
+                                      <div class="modal-dialog modal-dialog-centered" role="document">
+                                          <div class="modal-content">
+                                              <div class="modal-header">
+                                                  <h5 class="modal-title bg-primary" id="popup"> Model Title</h5>
+                                                  <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                                                      <span aria-hidden="true">&times;</span>
+                                                  </button>
+                                              </div>
+                                              <div class="modal-body">
+                                                  <table class="table">
+                                                      <caption>My table</caption>
+                                                      <thead>
+                                                          <tr >
+                                                              <th>Name </th>
+                                                              <th>Dept</th>
+                                                              <th>Location</th>
+                                                          </tr>
+                                                      </thead>
+                                                      <tbody>
+                                                          <tr>
+                                                              <td>Deva</td>
+                                                              <td>IT/IT</td>
+                                                              <td>Pondicherry</td>
+                                                              
+              
+                                                          </tr>
+                                                          <tr>
+                                                              <td>Aravindhan</td>
+                                                              <td>IS/IT</td>
+                                                              <td>Cuddalore</td>
+                                                          </tr>
+                                                      </tbody>
+                                                  </table> 
+                                                  
+                                                    </div>
+                                                  </div>
+                                              </div>
+                                              <div class="modal-footer">
+                                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
+                                                  <button type="button" class="btn btn-primary"> Save changes</button>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </form>
+                          </div>
+                      </nav>
+              
+                    
+
+              
+                </form>
+            </div>
+        </nav>
+    </div>
+    <br>
+    <div class="container">
+      <div class="alert bg-secondary">
+       <p style="color: crimson;"><center><strong><i></i></strong></center> </p>
+      
+      
+       <div class="alert bg-danger">
+        <p style="color: crimson;"><center><strong><i>DEPARTMENTS</i></strong></center> </p>
+       </div>
+      
+        <div class="row">
+          
+          <div class="col-md-3">
+            <div class="card">
+              <a href="https://marketmadhouse.com/pillars-of-healthcare-business-7-important-departments-in-a-hospital/" target="_blank">
+                <img src="https://i0.wp.com/marketmadhouse.com/wp-content/uploads/2021/01/pexels-edward-jenner-4031818.jpg?resize=1024%2C682&ssl=1" alt="Lights" style="width:100%">
+                <div class="caption">
+                  <p><center>OPD</center></p>
+                </div>
+              </a>
+            </div><br>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <a href="https://marketmadhouse.com/pillars-of-healthcare-business-7-important-departments-in-a-hospital/" target="_self">
+                <img src="https://i1.wp.com/marketmadhouse.com/wp-content/uploads/2021/01/pexels-%D0%BF%D0%B0%D0%B2%D0%B5%D0%BB-%D1%81%D0%BE%D1%80%D0%BE%D0%BA%D0%B8%D0%BD-2324837.jpg?resize=1024%2C682&ssl=1" alt="Nature" style="width:100%" style="height: 100%;">
+                <div class="caption">
+                  <p><center>Nursing Department</center></p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <a href="https://marketmadhouse.com/pillars-of-healthcare-business-7-important-departments-in-a-hospital/" target="_self"" target="_blank">
+                <img src="https://i2.wp.com/marketmadhouse.com/wp-content/uploads/2021/01/thermometer-1539191_1280.jpg?resize=1024%2C682&ssl=1" alt="Fjords" style="width:100%">
+                <div class="caption">
+                  <p><center>Paramedical Departments</center></p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <a href="https://marketmadhouse.com/pillars-of-healthcare-business-7-important-departments-in-a-hospital/" target="_self">
+                <img src="https://i2.wp.com/marketmadhouse.com/wp-content/uploads/2021/01/laboratory-563423_1280.jpg?resize=1024%2C682&ssl=1" alt="Fjords" style="width:100%">
+                <div class="caption">
+                  <p><center>PATHOLOGY DEPARTMENT.</center></p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card">
+                <a href="https://marketmadhouse.com/pillars-of-healthcare-business-7-important-departments-in-a-hospital/" target="_blank">
+                  <img src="https://i1.wp.com/marketmadhouse.com/wp-content/uploads/2021/01/pexels-andrea-piacquadio-3769151.jpg?resize=1024%2C684&ssl=1" alt="Lights" style="width:100%">
+                  <div class="caption">
+                    <p><center>INPATIENT WARDS</center></p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <a href="https://marketmadhouse.com/pillars-of-healthcare-business-7-important-departments-in-a-hospital/" target="_self">
+                  <img src="https://i1.wp.com/marketmadhouse.com/wp-content/uploads/2021/01/businessman-3105873_1280.jpg?resize=1024%2C641&ssl=1" alt="Nature" style="width:100%"  style="height:120% ;">
+                  <div class="caption">
+                    <p><center>ADMINISTRATION DEPARTMENT</center></p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <a href="https://marketmadhouse.com/pillars-of-healthcare-business-7-important-departments-in-a-hospital/" target="_blank">
+                  <img src="https://i0.wp.com/marketmadhouse.com/wp-content/uploads/2021/01/office-1574717_1280.jpg?resize=1024%2C700&ssl=1" alt="Fjords" style="width:100%">
+                  <div class="caption">
+                    <p><center>FINANCE DEPARTMENT</center></p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+
+        </div>
+      </div>
+    </div>
+  <div class="container">
+  <div class="alert alert-primary">
+   <p style="color: crimson;"><center><strong><i></i></strong></center> </p>
+
+   <div class="alert bg-success">
+    <p style="color: crimson;"><center><strong><i>TOP DOCTORS</i></strong></center> </p>
+   </div>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+      <li data-target="#myCarousel" data-slide-to="5"></li>
+      <li data-target="#myCarousel" data-slide-to="6"></li>
+      <li data-target="#myCarousel" data-slide-to="7"></li>
+      <li data-target="#myCarousel" data-slide-to="8"></li>
+      <li data-target="#myCarousel" data-slide-to="9"></li>
+      <li data-target="#myCarousel" data-slide-to="10"></li>
+    </ol>
+
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <img src="https://d2cyt36b7wnvt9.cloudfront.net/exams/wp-content/uploads/2017/01/05133450/Dr-William.png" alt="Baby Boy" style="width:100%;" style="height:100%;">
+        <div class="carousel-caption">
+          <h3>Dr. William A. Abdu, M.D, M.S.y</h3>
+          <p>Dr. Abdu is an Associate Professor of Orthopedics and of The Dartmouth Institute Medical Director at Dartmouth-Hitchcock Medical Center</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="https://d2cyt36b7wnvt9.cloudfront.net/exams/wp-content/uploads/2017/01/05133850/Dr.-Myles.-B.-Abbot.png" alt="small boy" style="width:100%;" style="height:100%;">
+        <div class="carousel-caption">
+          <h3> Dr. Myles. B. Abbott, M.D.</h3>
+          <p>Dr. Myles is also one of the best-known doctors of Pediatricians in the world. He graduated from the University of Miami Leonard M Miller School of Medicine in 1972. He treats the problems of growth and child development</p>
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="https://d2cyt36b7wnvt9.cloudfront.net/exams/wp-content/uploads/2017/01/05042830/Fouad-Abbas.jpg" alt="u19" style="width:100%;" style="height:100%;">
+        <div class="carousel-caption">
+          <h3>Dr. Fouad. M. Abbas, M.D.</h3>
+          <p>Dr. Abbas is a well-known Gynecologist/Oncologist. His specialization field is Oncologist of Obstetrician and Gynecology. He is also considered to be one of the best doctors of Oncology in the world. The term Oncology is the study of cancer.</p>
+        </div>
+      </div>
+
+        <div class="item">
+          <img src="https://d2cyt36b7wnvt9.cloudfront.net/exams/wp-content/uploads/2017/01/05133453/Dr.-Khalid.png" alt="u19" style="width:100%;" style="height:100%;">
+          <div class="carousel-caption">
+            <h3>Dr. Khalid Abbed, M.D.</h3>
+            <p>Dr. Khalid is a famous doctor of Neuro. He is an Associate Professor and Chief of the Spine Section in the Department of Neurosurgery. His area of clinical interest is in the treatment of spinal disorders.</p>
+          </div>
+        </div>
+        
+        <div class="item">
+          <img src="https://d2cyt36b7wnvt9.cloudfront.net/exams/wp-content/uploads/2017/01/05042813/Dr-Naresh-Trehan.jpg" alt="u19" style="width:100%;" style="height:100%;">
+          <div class="carousel-caption">
+            <h3>Dr. Naresh Trehan</h3>
+            <p>Dr. Naresh is a famous Indian cardiovascular and cardiothoracic surgeon. He was born on August 12, 1946, in Delhi, India. He obtained a medical degree from King George’s Medical College in Lucknow.</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="https://d2cyt36b7wnvt9.cloudfront.net/exams/wp-content/uploads/2017/01/05042820/Dr.-A.-Reese-Abright.png" alt="u19" style="width:50%;"  style="height:50%;">
+          <div class="carousel-caption">
+            <h3>Dr. Arthur Reese Abright, M.D.</h3>
+            <p>Dr. Reese is also one of the best doctors of Psychiatry. She treats the problems of depressions and mind-related problems. She is considered world’s best doctor by many.</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="https://d2cyt36b7wnvt9.cloudfront.net/exams/wp-content/uploads/2017/01/05042823/DR.-CORRIE-T.M-ANDERSON.jpg" alt="u19" style="width:100%;" style="height:100%;">
+          <div class="carousel-caption">
+            <h3>Dr. Corrie T.M Anderson, M.D.</h3>
+            <p>Dr. Anderson is also one of the best doctors in Pediatric Anesthesiologist around the world. He received his A.B. with Honors in Biochemistry from Harvard University and Doctor of Medicine (M.D) from Stanford University School of Medicine in 1982. He can be truly crowned as “world best doctor”.</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="https://d2cyt36b7wnvt9.cloudfront.net/exams/wp-content/uploads/2017/01/05043715/DR.-MARK.-F.-AARON.jpg" alt="u19" style="width:100%;" style="height:100%;">
+          <div class="carousel-caption">
+            <h3>Dr. Mark. F. Aaron, M.D.
+            </h3>
+            <p>Dr. Aaron is also one of the best doctors in cardiologists. His specialization is Cardiovascular Disease. The term Cardiology is related to the heart and its problems. He is a world-famous doctor known for curing various heart diseases.</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="https://d2cyt36b7wnvt9.cloudfront.net/exams/wp-content/uploads/2017/01/05042828/Dr-SudhansuBhatacharya.jpg" alt="u19" style="width:100%;" style="height:100%;">
+          <div class="carousel-caption">
+            <h3>Dr. Sudhansu Bhattacharyya, MBBS, MS, MCH</h3>
+            <p>Dr. Sudhansu is also one of the best Indian Cardiovascular Surgeons. He obtained MBBS and M.S. General Surgery from Ahmedabad. He had invented, designed, and patented a few surgical instruments, the most important ones being Atrial Retractor for Mitral Valve Replacement</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="https://d2cyt36b7wnvt9.cloudfront.net/exams/wp-content/uploads/2017/01/05042826/DR.-MONA-M.-ABAZA.jpg" alt="u19" style="width:100%;" style="height:100%;">
+          <div class="carousel-caption">
+            <h3>Dr.Mona.M.Abaza, M.D.</h3>
+            <p>Dr. Abaza is a specialized doctor in ENT Otolaryngologist, Adenoidectomy, esophagoscopy, Nasal airway surgery, and tracheostomy. She is a world-famous ENT Doctor and treats problems of the ear, head, nose, throat, and neck.</p>
+          </div>
+        </div>
+         <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  
+        </div>
+        </div>
+        <BR>
+          <BR>
+            <div class="container">
+        <div class="alert alert-warning">
+          <p style="color: crimson;"><center><strong><i></i></strong></center> </p>
+          <div class="container">
+            <div class="alert alert-success">
+             <p style="color: crimson;"><center><strong><i>TECHNOLOGIES</i></strong></center> </p>
+            </div>
+            
+              <div class="row">
+                
+                <div class="col-md-3">
+                  <div class="card">
+                    <a href="https://www.alliancemedical.co.uk/what-we-do/patient-services/types-of-scan/mri" target="_blank">
+                      <img src=https://www.alliancemedical.co.uk/sites/default/files/styles/image_link/public/upload/images/thumbnails/AM_15_09_14_0071-400x225px.jpg?itok=eLO9VSuQ" alt="Lights" style="width:100%">
+                      <div class="caption">
+                        <p><center>MRI</center></p>
+                      </div>
+                    </a>
+                  </div><br>
+                </div>
+                <div class="col-md-3">
+                  <div class="card">
+                    <a href="https://www.alliancemedical.co.uk/what-we-do/patient-services/types-of-scan/ct" target="_self">
+                      <img src="https://www.alliancemedical.co.uk/sites/default/files/styles/image_link/public/upload/images/thumbnails/AM_05_09_14_1084-400x225px_0.jpg?itok=wtdqOqVS" alt="Nature" style="width:100%" style="height: 100%;">
+                      <div class="caption">
+                        <p><center>CT</center></p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card">
+                    <a href="https://www.alliancemedical.co.uk/what-we-do/patient-services/types-of-scan/petct" target="_self"" target="_blank">
+                      <img src="https://www.alliancemedical.co.uk/sites/default/files/styles/image_link/public/upload/images/thumbnails/AM_25_09_14_0306-400x225px.jpg?itok=wEXyvjHg" alt="Fjords" style="width:100%">
+                      <div class="caption">
+                        <p><center>PET/CT</center></p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card">
+                    <a href="https://www.alliancemedical.co.uk/what-we-do/patient-services/types-of-scan/x-ray" target="_self">
+                      <img src="https://www.alliancemedical.co.uk/sites/default/files/styles/image_link/public/upload/images/thumbnails/AM_05_09_14_0349-400x225px.jpg?itok=OuS9lREZ" alt="Fjords" style="width:100%">
+                      <div class="caption">
+                        <p><center>X-RAY</center></p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card">
+                    <a href="https://www.alliancemedical.co.uk/what-we-do/patient-services/types-of-scan/ultrasound" target="_blank">
+                      <img src="https://www.alliancemedical.co.uk/sites/default/files/styles/image_link/public/upload/images/thumbnails/AM_05_09_14_0525-400x225px.jpg?itok=ALjih-56" alt="Lights" style="width:100%">
+                      <div class="caption">
+                        <p><center>ULTRASOUND</center></p>
+                      </div>
+                    </a>
+                  </div><br>
+                </div>
+                <div class="col-md-3">
+                  <div class="card">
+                    <a href="https://www.alliancemedical.co.uk/what-we-do/patient-services/types-of-scan/bone-densitometry-dexa" target="_blank">
+                      <img src="https://www.alliancemedical.co.uk/sites/default/files/styles/image_link/public/upload/images/thumbnails/AM_15_09_14_0236-400x225px_0.jpg?itok=doaMVaSN" alt="Lights" style="width:100%">
+                      <div class="caption">
+                        <p><center>BONE DENSITOMETRY</center></p>
+                      </div>
+                    </a>
+                  </div><br>
+                </div>
+                <div class="col-md-3">
+                  <div class="card">
+                    <a href="https://www.alliancemedical.co.uk/what-we-do/patient-services/types-of-scan/fluoroscopy" target="_blank">
+                      <img src="https://i0.wp.com/marketmadhouse.com/wp-content/uploads/2021/01/pexels-edward-jenner-4031818.jpg?resize=1024%2C682&ssl=1" alt="Lights" style="width:100%">
+                      <div class="caption">
+                        <p><center>Fluoroscopy</center></p>
+                      </div>
+                    </a>
+                  </div><br>
+                </div>
+                <div class="col-md-3">
+                  <div class="card">
+                    <a href="https://www.alliancemedical.co.uk/what-we-do/patient-services/types-of-scan/fluoroscopy" target="_blank">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgAciZQqGp5bNxNIqRem3sGZ7M5iV28k7HZg&usqp=CAU" alt="Lights" height="145px" style="width:100%"; >
+                      <div class="caption">
+                        <p><center>MEDICAL IMAGING</center></p>
+                      </div>
+                    </a>
+                  </div><br>
+                </div>
+
+
+
+              </div>
+            </div>
+          </div>
+          <br>
+          <BR>
+            <div class="container">
+              <div class="alert bg-secondary">
+               <p style="color: crimson;"><center><strong><i></i></strong></center> </p>
+              
+              
+               
+                    <div class="panel-group" id="accordion">
+                      <div class="panel panel-info">
+                          <div class="panel-heading">
+                              <h4 class="panel-title">
+                                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseexample"><center>Contact Us</center></a>
+                              </h4>
+                         
+                  
+                          </div>
+                          <div id="collapseexample" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                  <ol>
+                                      <li>Sir Garfield Sobers Award for ICC Male Cricketer of the Decade</li>
+                                      <li> ICC Men's ODI Cricketer of the Decade.</li>
+                                      <li>Rajiv Gandhi Khel Ratna Award in 2018</li>
+                                      <li> Bharat Ratna in 2014.</li>
+                                      <li>Arjuna Award in 2013</li>
+                                  </ol>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <script type="text/javascript">
+                      $(function()
+                      {
+                          $('#collapseexample').on('show.bs.collapse', function()
+                          {
+                  
+                          });
+                      )}
+                  </script>
+                  
+        
+        
+                </div>
+              </div>
+            </div>
+          
+          
+            
+             
+        
+
+</html>

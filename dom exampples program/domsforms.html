@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>doms forms</title>
+    </head>
+    <body>
+        <form>
+        <div>
+            <label for="name">name:</label>
+           <input id="name" type="text">
+        </div>
+        <div>
+            <label for="dname">dname:</label>
+           <input id="dname" type="text">
+        </div>
+        <div>
+            <input id="submit" type="submit">
+        </div>
+    </form>
+    <p></p>
+    <script>
+        const form=document.querySelector('form');
+        const name=document.getElementById('name');
+        const dname=document.getElementById('dname');
+        const para=document.querySelector('p');
+        para.style.color ='red';
+        form.addEventListener("submit",(e) =>{
+            if(name.value ===''||dname.value === ''){
+                e.preventDefault();
+                para.textContent='need to fill'
+            }
+        });
+    </script>
+    </body>
+</html>

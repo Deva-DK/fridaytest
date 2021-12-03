@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>DOM Display Elements example</title>
+    </head>
+    <body style="background-color: aquamarine;">
+        <section>
+       <center><img src="C:\HTML NEW\IMAGES\virat.jpg" alt="virat18" height="400" width="250"></center>
+       <p> <center><a href="https://en.wikipedia.org/wiki/Virat_Kohli"><b><i>Wiki Link</i></b></a> </center></p>
+      
+        </section>
+        <script>
+            const img=document.querySelector('img');
+           console.log(img.TEXT_NODE)
+           img.height=400
+            const p=document.querySelector('a');
+            p.textContent="Virat Kohli";
+        </script>
+    </body>
+</html>
+ 

@@ -1,0 +1,26 @@
+function Health()
+    {
+        const weight= prompt("Enter Weight(in Kgs)");
+            const height= prompt("Enter Height(in m)");
+            let BMI = (weight)/(height*height)
+            if(BMI>18.5 && BMI<24.5)
+            {
+                
+                return ("OH YEAH!!!! You are Normal")
+               
+            }
+            else if(BMI>24.5 && BMI<29.5)
+            {
+                return (" OH NO!!!!! You are Overweight")
+                
+            }
+            else if(BMI>29.5)
+            {
+                return ("OH NO!!!!! You are Obese")
+                
+            }
+            else
+            {
+                return (" OH NO!!!!! You are Lean")
+            }
+    }

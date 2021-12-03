@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title> JavaScript Classes Examples</title>
+</head>
+<script>
+    class Person
+    {
+        constructor(name,year)
+        {
+            this.name = name;
+            this.year = year;
+        }
+        age(year)
+        {
+            return year - this.year;
+        }
+    }
+</script>
+<body>
+    <p id="person"></p>
+    <script>
+        let date = new Date();
+        let year = date.getFullYear();
+        let p = new Person("Deva", 1999);
+        document.getElementById("person").innerHTML = "I'm Devakumar,"  + p.age(year) + " years old";
+    </script>
+</body>
+</html>

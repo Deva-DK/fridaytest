@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Data Manipulation</title>
+    </head>
+    <body>
+        
+
+            Name:<input type="text" id="uname">
+             <button type="button" id="btn">Click</button>
+            <script>
+        let txt = document.querySelector('#uname');
+        txt.onblur = function () {
+            alert(document.querySelector('#uname').value);
+        };
+    </script>
+    <button>Click Me</button>
+    <p> No handler here.</p>
+    <script>
+        let button=document.querySelector("button");
+        button.addEventListener("click", () => {
+            console.log("Button clicked");
+        });
+    </script>
+    </body>
+</html>

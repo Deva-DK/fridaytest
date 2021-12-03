@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Files attribute</title>
+
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            width: 200px;
+            padding: 10px;
+            margin:  auto;
+            border: 1px solid yellow;
+            color: blanchedalmond;
+        }
+    </style>
+</head>
+
+<body style="background-color: black;">
+
+    <h1 style="color: chartreuse;">FORM</h1>
+    <form>
+        <label for="name">First Name*:</label><br>
+        <input type="text" id="name" name="fname" placeholder="Enter First Name" required autofocus><br><br>
+        <label for="name">Middle Name:</label><br>
+        <input type="text" id="name" name="mname" placeholder="Enter Middle Name" ><br><br>
+        <label for="name">Last Name*:</label><br>
+        <input type="text" id="name" name="name" placeholder="Enter Last name" required autofocus><br><br>
+
+        <label name="gender">Gender*</label><br>
+        <input type="radio" id="gender" name="gender">
+        <label for="Male">Male</label><br>
+        <input type="radio" id="gender" name="gender">
+        <label for="FeMale">Female</label><br>
+        <input type="radio" id="gender" name="gender">
+        <label for="Non-binary">Non binary</label><br><br>
+        
+
+        <label for="date">Date-of-Birth*:</label><br>
+        <input type="date" id="date" for="date"><br><br>
+
+        <label for="mail">EMail ID*:</label><br>
+        <input type="email" id="mail" for="mail" placeholder="Enter EMail id" required autofocus><br><br>
+
+        
+        <label for="mail">Alternate EMail ID:</label><br>
+        <input type="email" id="mail" for="mail" placeholder="Enter alternate EMail id"><br><br>
+
+
+
+        <label for="pin2">College Enroll ID*:</label><br>
+        <input type="text" id="pin2" name="pin2" size="20" maxlength="6" placeholder="Enter College Enroll No." required><br><br>
+
+        <label for="phn">Phone*:</label><br>
+        <input type="tel" id="pin2" name="pin2" size="10" maxlength="10" placeholder="+91-1234-56-7890" required><br><br>
+
+        <label for="password">Aadhaar Number*:</label><br>
+        <input type="password" id="pwdd" name="pwdd" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 3}$"><br><br>
+
+        
+
+        <label name="Department"> Department*:</label><br>
+
+        <li><label name="IT">IT</label>
+            <input type="radio" id="IT"><br></li>
+      
+       <li> <label name="ECE">ECE</label>
+        <input type="radio" id="ECE"><br> </li>
+
+        <li><label name="CSE">CSE</label>
+        <input type="radio" id="CSE"><br></li>
+
+        <li><label name="EEE">EEE</label>
+            <input type="radio" id="EEE"><br></li>
+
+        <li><label name="ICE">ICE</label>
+                <input type="radio" id="ICE"><br></li>
+
+        <br>
+
+       
+
+        
+        <label for="record">UG Percentage*:</label><br>
+        <input type="number" id="record" for="record"  max="3"><br><br>
+
+
+
+        <label for="role">Jobrole:</label><br>
+        <input type="text" id="role" for="role" value="GET" readonly><br><br>
+
+        <label for="sal">Salary:</label><br>
+        <input type="text" id="sal" for="sal" value="3.5 LPA" readonly ><br><br>
+
+        <label for="skills">Skills*:</label><br>
+        <input list="skills">
+        <datalist id="skills">  
+         <option value="PYTHON">
+            <option value="HTML">
+            <option value="JAVA SCRIPT">
+            <option value="CSS"></option>
+            <option value="ORACLEs"></option>
+        </datalist><br><br>
+
+        <label for="files">Upload Documents*:</label><br>
+        <p style="color: red;">Upload UG, SSLC, HSC certificates</p>
+        <input type="file" id="files" name="files" multiple><br><br>
+
+        <label for="res">Upload Resume*:</label><br>
+        <p style="color: red;">Upload updated resume</p>
+        <input type="file" id="res" name="res"><br><br>
+
+        <label for="poto">Upload Photo*:</label><br>
+        <p style="color: red;">Upload updated photo</p>
+        <input type="file" id="poto" name="poto"><br>
+
+       
+
+        <p style="color: crimson;">* Required fields</p>
+
+
+        
+
+        <button onclick="window.location.href='file:///C:/HTML%20NEW/sucess.html'">Submit</button>
+        <input type="reset">
+
+    </form>
+
+</body>
+
+</html>

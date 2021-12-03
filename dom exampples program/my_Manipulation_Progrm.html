@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Data Manipulation</title>
+       <script>
+        function addBorder()
+            {
+                const img=document.querySelector('img');
+                img.style.border="20px solid red"
+            }
+            function removeBorder()
+            {
+                const img=document.querySelector('img');
+                img.style.border="6px solid red"
+            }
+        </script>
+    </head>
+    <body style="background-color: aqua;">
+        <img src="C:\HTML NEW\IMAGES\virat.jpg" alt="virat Kohli" width="300" height="350" onmouseover="addBorder()" onmouseleave="removeBorder()">
+        <h1 style="color: crimson;"><b><i>VIRAT KOHLI</i></b></h1>
+    <ul id="menu">TEAMS
+    <li>IPL : RCB</li>
+    <li>U19 ; INDIA JUNIOR</li>
+    
+    </ul>
+        
+        <script>
+        let menu = document.getElementById('menu'); 
+        //console.log(menu.innerHTML); //1
+        
+        let li = document.createElement('li'); //2
+        li.textContent = 'DOMESTIC : DELHI'; //3        
+        menu.appendChild(li); //4
+        //console.log(menu.innerHTML);
+        
+        let li1 = document.createElement('li');
+        li1.textContent = 'NATIONAL : INDIA';
+        menu.insertBefore(li1, menu.firstElementChild); //5
+        //console.log(menu.innerHTML);
+
+        let clonedMenu = menu.cloneNode(true); //6
+        clonedMenu.id = 'menu-mobile';
+document.body.appendChild(clonedMenu);
+console.log(clonedMenu);
+
+       
+        </script>
+        </body>
+    </html>

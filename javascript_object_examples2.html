@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title> JavaScript Object Examples</title>
+</head>
+<script>
+    function loaddata()
+    {
+        var name = document.getElementById('name').value
+        const person = {
+            firstname: name,
+            age: document.getElementById('age').value,
+            mobile: document.getElementById('mobile').value,
+           
+            fullName : function(){return "Mr."+this.firstname;}
+            
+           
+        };
+        document.getElementById("data").innerHTML = person.fullName() + " His age is " + person.age + " and his contact number is " + person.mobile ;
+       
+    }
+    function cleardata()
+    {
+        document.getElementById("data").innerHTML="";
+    }
+</script>
+<body>
+    <input type="hidden" id="name" value="Devakumar.R">
+    <input type="hidden" id="age" value="21">
+   
+    <input type="hidden" id="mobile" value="9994657610">
+
+    <div onclick="loaddata()"> My Details</div>
+
+    <p id="data"></p>
+
+    <div onclick="cleardata()"> ClearData</div>
+    
+</body>
+</html> 

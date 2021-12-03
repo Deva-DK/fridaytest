@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang>
+<head>
+<style>
+    .center {
+      text-align: center;
+      color:blueviolet;
+      background-color: sandybrown;
+    }
+    </style>
+    <style>
+        .right {
+          text-align: right;
+          color:tomato;
+          background-color: rgb(222, 244, 96);
+        }
+        </style>
+        <style>
+        .left {
+            text-align: left;
+            color:pink;
+                      }
+          </style>
+          </head>
+          <body>
+          <center><img src="C:\HTML NEW\IMAGES\dog.jpg" alt="reload image"></center>
+          </body>
+          </html>
+
+}

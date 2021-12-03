@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>  registration form </title>
+</head>
+<body>
+<div>
+  Name:<input type="text" id="name">
+  <br> 
+  Phone:<input type="number" id="phn">
+  <br> 
+  Country:<input type="text" id="country">
+  <br> 
+  Email id:<input type="text" id="mailid">
+  <br>
+  <button onclick="alertFunction()">Click Here</button>
+</div>
+<script>
+    function alertFunction() {
+      var myname = document.getElementById("name").value;
+      var myphone = document.getElementById("phn").value;
+      var mycountry = document.getElementById("country").value;
+      var mymail = document.getElementById("mailid").value;
+      result = myname + "," + myphone + "," + mycountry + "," + mymail;
+      alert(result);
+      return result;
+    }
+    </script>
+</body>
+</html>
+

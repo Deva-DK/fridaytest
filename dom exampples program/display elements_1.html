@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>DOM Display Elements example</title>
+        <script>
+            function addchildElement()
+            {
+                const sect=document.querySelector('section');
+                const div=document.createElement('div');
+                div.textContent=" NEW  CHILD"
+                sect.appendChild(div);
+            }
+           
+        </script>
+    </head>
+    <body style="background-color: aquamarine;">
+        <section>
+       <center><img src="C:\HTML NEW\IMAGES\virat.jpg" alt="Just Photo" width="350" height="450"></center>
+       <p> <center><a href="https://en.wikipedia.org/wiki/Virat_Kohli"><b><i>wikipedia Link</i></b></a> </center></p>
+      
+        </section>
+        <script>
+            const img=document.querySelector('img');
+           console.log(img.TEXT_NODE)
+           
+          
+            const p=document.querySelector('a');
+            p.textContent="Virat Kohli";
+        </script>
+        <button type="button" onclick="addchildElement()">Add New Child</button>
+        <button type="button" onclick="deletechildElement()">Delete New Child</button>
+       
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Simple Drag Example</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+</head>
+<script>
+    $("#unname").blur(function()
+    {
+        let value=$("#uname").val();
+        if (value==='')
+        {
+            $("#unameerr").text("Enter Username").css("color","skyblue");
+            $("#unameerr").text("Enter Username").css("font-weight","bold");
+            $("#uname").focus()
+        }
+        else
+        {
+            $("#sname").val(value);
+            $("#unameerr").text("");
+        }
+    })
+});
+$(function()
+{
+    $('form').draggable();
+});
+</script>
+<body>
+    <form style="border: 2px solid brown; width: 400px;">
+    <lable> Enter UserName:</lable>
+    
+    </form>
+</body>

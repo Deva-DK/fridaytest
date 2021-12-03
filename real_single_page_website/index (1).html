@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CSS Response Menu</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="C:\HTML NEW\real_single_page_website\styles.css">
+</head>
+<body>
+    <header class="menu">
+        <div class="menu-wrap">
+            <img src="C:\HTML NEW\real_single_page_website\logo.png" class="logo-img" alt="Logo">
+            <input type="checkbox" id="checkbox">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <label for="checkbox">
+                <i class="fa fa-bars menu-icon"></i>
+            </label>
+        </div>
+    </header>
+    <main>
+        <section id="home">
+            <div class="section-inner">
+                <img src="C:\HTML NEW\real_single_page_website\logo.png">
+                <h1>Hi, I'm gateway.</h1>
+            </div>
+        </section>
+        <section id="about">
+            <div class="section-inner">
+                <h2>Register Here</h2>
+                <form action="register.php" method="post">
+                <ul>
+                    <li>Enter FirstName:<input type="text" name="fname" required></li>
+                    <li>Enter LastName:<input type="text" name="lname" required></li>
+                    <li>Enter Password:<input type="password" name="upwd" required></li>
+                    <li>Enter Mobile:<input type="number" name="mobile" required></li>
+                    <li>Enter MailId:<input type="email" name="mail" required></li>
+                    <li><input type="submit" value="Send"><input type="reset" value="Cancel"></li>
+                </ul>
+                </form>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="section-inner">
+                <h2>Contact me</h2>
+                <p>You can find me on:</p>
+                <ul>
+                    <li><a href="https://twitter.com/">Twitter</a></li>
+                    <li><a href="https://www.facebook.com">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/">Instagram</a></li>
+                </ul>
+                <p>Or, you can <a href="mailto:info@gateway.com">send me an email</a>.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        © Copyright Gateway Software SolutionS, 2007
+    </footer>
+</body>
+</html>

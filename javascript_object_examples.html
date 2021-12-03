@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title> JavaScript Object Examples</title>
+</head>
+<script>
+    function loaddata()
+    {
+        var name = document.getElementById('name').value
+        const person = {
+            firstname: name,
+            age: document.getElementById('age').value,
+            Phone: document.getElementById('mobile').value,
+            role: document.getElementById('role').value
+        };
+        document.getElementById("data").innerHTML = person.firstname.toUpperCase() + "is working as a " + person.role + " at RNTBCI. His age is " + person.age + " and his contact number is " + person.Phone ;
+
+    }
+    function cleardata()
+    {
+        document.getElementById("data").innerHTML="";
+    }
+</script>
+<body>
+    <input type="hidden" id="name" value="Devakumar.R">
+    <input type="hidden" id="age" value="21">
+    <input type="hidden" id="role" value="GET">
+    <input type="hidden" id="mobile" value="9994657610">
+
+    <div onclick="loaddata()"> My Details</div>
+
+    <p id="data"></p>
+
+    <div onclick="cleardata()"> ClearData</div>
+
+</body>
+</html>

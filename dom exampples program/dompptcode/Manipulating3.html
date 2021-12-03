@@ -1,0 +1,16 @@
+<ol id="menu">
+    <li>Core Java</li>
+    <li>HTML</li>
+    <li>CSS</li>
+</ol>
+<script>
+    let menu = document.getElementById('menu');
+    
+    let li = document.createElement('li');
+        li.textContent = 'Java';
+    
+        menu.replaceChild(li, menu.firstElementChild);
+    menu.removeChild(menu.lastElementChild);
+
+    console.log(menu.innerHTML);
+</script>

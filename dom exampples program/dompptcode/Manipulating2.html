@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Data Manipulation Type 2</title>
+    </head>
+    <body style="background-color: darkgreen;">
+
+<div id="top">
+<div id="nested">
+</div>
+</div>  
+
+<script>
+let div = document.createElement("div")
+
+let p = document.createElement("p")
+let span = document.createElement("span");
+
+//div.append(p, "Some text") //7
+//div.prepend(span); //8
+//console.log(div.childNodes)
+
+div.append("RNTBCI");
+div.prepend("Welcome to ");
+
+document.write(div.textContent);
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<form>  
+Enter the year you were born: <input type="number" id="num" name="number"/><br/> <br/>
+<input type="button" value="Display Year" onclick="display()"/> <br/>
+<input type="button" value="Calculate Age" onclick="getsq()"/> <br/><br/>
+</form>  
+
+<p>What is DOM?</p>  
+<p>It is an API</p>  
+<p>that can be used with any programming languages like JS</p>  
+<p>to represent the webpage in a tree structure</p>
+<p>so that the programs can read, access, change a document’s structure, style or content</p>
+<button onclick="countpara()">Count no of lines</button> 
+
+<script type="text/javascript">  
+
+    function getsq()
+    {  
+    var no=document.getElementById("num").value;  //1
+    alert("Your age is "+(2021-no));  
+    }  
+
+    function display()  
+    {  
+    var disp=document.getElementsByName("number");  //2
+    alert("Entered Year "+disp[0].value);  
+    }  
+
+    function countpara(){  
+    var totalpara=document.querySelectorAll("p");  //3
+    alert("total no of lines in the para: "+totalpara.length);  
+    }  
+    </script> 

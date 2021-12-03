@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>DoM example</title>
+        <script type="text/javascript">
+            function addChildElement(){
+                const sect=document.querySelector('section');
+                const div=document.createElement('div');
+                div.textContent="hi";
+                sect.appendChild(div);
+                const text=document.createTextNode('my div');
+                const ndiv=document.querySelector('div');
+                ndiv.appendChild(text);
+            }
+            function deleteChildElement(){
+                const sect=document.querySelector('section');
+                const div=document.querySelector('div');
+                sect.removeChild(div);
+            }
+        </script>
+    </head>
+    <body>
+        <section>
+            <img src="D:\webtraining\images\download1.jpg" width="200" height="300">
+            <p>here is the examples</p>
+            <p>dhoni<a href="https://en.wikipedia.org/wiki/Virat_Kohli">Virat Kohli</a></p>
+           
+        </section>
+        <script>
+            const img=document.querySelector('img');
+           console.log(img)
+           img.height=400
+            const p=document.querySelector('p');
+            p.textContent="hello";
+        </script>
+        <button type="button" onclick="addChildElement()">add element</button>
+        <button type="button" onclick="deleteChildElement()">del element</button>
+    </body>
+</html>

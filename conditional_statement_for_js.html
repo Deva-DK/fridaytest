@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Conditional Statements on JS</title>
+    </head>
+    <body style="background-color: cyan;">
+            <h1 style="color: darkmagenta;"><b><i>BMI Results</i></b></h1>
+        <script >
+            const weight= prompt("Enter Weight(in Kgs)");
+            const height= prompt("Enter Height(in m)");
+            let BMI = (weight)/(height*height)
+            if(BMI>18.5 && BMI<24.5){
+                
+                document.write("OH YEAH!!!! You are Normal")
+               
+            }
+            else if(BMI>24.5 && BMI<29.5)
+            {
+                document.write(" OH NO!!!!! You are Overweight")
+                <br>
+                document.write("Practise EXERCISE daily")
+            }
+            else if(BMI>29.5){
+                document.write("OH NO!!!!! You are Obese")
+                <br>
+                document.write("Practise EXERCISE daily")
+            }
+            else
+            {
+                document.write(" OH NO!!!!! You are Lean")
+            }
+        </script>
+        
+    </body>
+</html>
